@@ -1,4 +1,9 @@
-# 2024-spring-ab-python-ads-HW-4
+[app](..%2Fapp)
+[app.Dockerfile](..%2Fapp.Dockerfile)
+[database.sql](..%2Fdatabase.sql)
+[postgres.Dockerfile](..%2Fpostgres.Dockerfile)
+[docker-compose.yml](..%2Fdocker-compose.yml)
+[trees.db](..%2Ftrees.db)# 2024-spring-ab-python-ads-HW-4
 
 ## Интеграции и БД + повторение прошлого семестра :)
 

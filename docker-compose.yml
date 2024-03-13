@@ -1,0 +1,27 @@
+version: "3.3"
+
+services:
+  postgres:
+    build:
+      context: ..
+      dockerfile: postgres.Dockerfile
+    ports:
+      - 5432:5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data/some_data
+    environment:
+      - PGDATA=/var/lib/postgresql/data/some_data
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=requests_log
+
+  app:
+    build:
+      context: ..
+      dockerfile: app.Dockerfile
+    ports:
+      - 8000:80
+    environment:
+      - DB_URL=postgresql+psycopg2://postgres:postgres@postgres:5432/postgres
+volumes:
+  pgdata:
